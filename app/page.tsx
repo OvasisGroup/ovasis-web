@@ -129,7 +129,7 @@ export default function Home() {
                   className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity font-medium"
                   style={{ color: "#b68b2d" }}
                 >
-                  Let's work
+                  Let&apos;s work
                   <ArrowRightIcon className="w-4 h-4" />
                 </a>
               </motion.div>
