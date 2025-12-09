@@ -144,14 +144,14 @@ export default function Home() {
           <div className="overflow-x-auto">
             <div className="flex gap-8 pb-4 justify-center min-w-max">
               {[
-                { name: "Figma", icon: "🎨" },
-                { name: "Next.js", icon: "⚡" },
-                { name: "shadcn/ui", icon: "🎯" },
-                { name: "Python", icon: "🐍" },
-                { name: "Prisma", icon: "📊" },
-                { name: "PostgreSQL", icon: "🗄️" },
-                { name: "Flutter", icon: "📱" },
-                { name: "Swift", icon: "🍎" },
+                { name: "Figma", logo: "/images/logos/figma.png" },
+                { name: "Next.js", logo: "/images/logos/nextjs.png" },
+                { name: "shadcn/ui", logo: "/images/logos/shadcn.png" },
+                { name: "Python", logo: "/images/logos/python.png" },
+                { name: "Prisma", logo: "/images/logos/prisma.png" },
+                { name: "PostgreSQL", logo: "/images/logos/postgres.png" },
+                { name: "Flutter", logo: "/images/logos/flutter.png" },
+                { name: "Swift", logo: "/images/logos/Swift_logo.png" },
               ].map((tech, index) => (
                 <motion.div
                   key={tech.name}
@@ -160,12 +160,15 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ scale: 1.1 }}
-                  className="flex flex-col items-center gap-2 p-4 rounded-lg border border-primary-foreground/10 hover:border-primary-foreground/30 transition-all bg-primary-foreground/5 backdrop-blur-sm"
+                  className="flex items-center justify-center p-3 rounded-lg bg-white transition-all"
                 >
-                  <div className="text-4xl">{tech.icon}</div>
-                  <p className="text-primary-foreground font-medium text-sm whitespace-nowrap">
-                    {tech.name}
-                  </p>
+                  <Image
+                    src={tech.logo}
+                    alt={tech.name}
+                    width={87}
+                    height={87}
+                    className="w-[87px] h-60px] object-contain"
+                  />
                 </motion.div>
               ))}
             </div>
